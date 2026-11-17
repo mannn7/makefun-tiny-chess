@@ -8,7 +8,7 @@ A 4 KB chess engine for make.fun's tiny-chess-01: build the strongest chess engi
 
 ## The engine
 
-`main.py` (3,935 bytes) is a zlib-compressed loader: it unpacks and execs the real engine, a 0x88-board negamax search with:
+`main.py` (2,952 bytes) is the entrypoint packed by the kit's `makefun compress` (LZMA): it unpacks and execs the real engine, a 0x88-board negamax search with:
 
 - PeSTO piece-square tables (midgame king table, endgame king table when no queens are left) and a bishop-pair bonus
 - Alpha-beta with principal variation search, transposition table, quiescence search, null-move pruning and killer moves
